@@ -1,0 +1,44 @@
+.theme-toggler {
+  margin-left: 38px;
+  font-size: 22px;
+  transition: opacity .3s ease-out;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+.top-section {
+  .fixed;
+  .left-top;
+  .full-width;
+  z-index: 100;
+  padding-top: 30px;
+  &--left, &--right, &--center {
+    .full-width;
+    .full-height;
+    .flex;
+    .flex-align-center;
+  }
+  &--left {
+    padding-left: 60px;
+  }
+  &--center {
+    .flex-justify-center;
+  }
+  &--right {
+    padding-right: 60px;
+    .flex-justify-end;
+  }
+}
+@media(max-width: 575px) {
+  .top-section {
+    &--left {
+      padding-left: 10px;
+    }
+    &--right {
+      padding-right: 10px;
+    }
+  }
+  .theme-toggler {
+    margin-left: 17px;
+  }
+}

@@ -1,0 +1,43 @@
+.menu {
+  padding-top: 200px;
+  padding-left: 50px;
+  .fixed;
+  height: 100vh;
+  max-width: 100%;
+  width: 320px;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  transform: translateX(-100%);
+  z-index: 99;
+  color: @dark-theme-text-color;
+  background-color: @dark-theme-bg;
+  a, button {
+    .uppercase;
+    letter-spacing: 0.05em;
+    color: inherit;  
+    transition: opacity .3s ease-out;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  li {
+    margin-bottom: 20px;
+  }
+  button {
+    margin-top: 55px;
+    font-weight: 900;
+  }
+}
+
+.overlay {
+  .fixed;
+  .left-top;
+  width: 100vw;
+  height: 100vh;
+  .hide;
+  background-color: black;
+  z-index: 98;
+  transition: opacity .3s ease-out; 
+  opacity: 0;
+}

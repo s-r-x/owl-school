@@ -1,0 +1,146 @@
+.button {
+  background-color: @main-color;
+  color: white;
+  border-radius: 40px;
+  font-weight: 900;
+  padding: 12px 30px;
+  transition: opacity .3s ease-out;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.logo {
+  width: 38px;
+}
+
+@ham-w: 28px;
+.hamburger {
+  .clean-button;
+  width: @ham-w;
+  &--inner {
+    .block;
+    width: @ham-w;
+    height: 2px;
+    background-color: black;
+    transition: all .3s ease-out;
+  }
+  &--top, &--middle {
+    margin-bottom: 7px;
+  }
+  &--middle {
+    width: @ham-w / 2;
+  }
+  &:hover {
+    .hamburger--top, .hamburger--bottom {
+      width: @ham-w / 2;
+    }
+    .hamburger--middle {
+      width: @ham-w;
+    }
+  }
+}
+
+.hamburger.is-active {
+  .hamburger {
+    &--inner {
+      background-color: white;
+    }
+    &--top, &--bottom {
+      width: 28px;
+    }
+    &--middle {
+      transform: translateX(@ham-w / 2);
+      width: @ham-w / 2;
+      background-color: @main-color;
+    }
+  }
+  &:hover {
+    .hamburger {
+      &--top, &--bottom {
+        transform: translateX(@ham-w / 2);
+        width: @ham-w / 2;
+      }
+      &--middle {
+        width: @ham-w;
+        transform: translateX(0);
+      }
+    }
+  }
+  + .theme-toggler {
+    color: white;
+  }
+}
+
+@circle-size: 120px;
+.circle-point {
+  .circle;
+  width: @circle-size;
+  height: @circle-size;
+  border: 3px dotted black;
+  text-align: center;
+  .number {
+    color: @main-color;
+    font-weight: 300;
+    font-size: 64px;
+    line-height: @circle-size;
+  }
+}
+
+.accent-text {
+  font-weight: 900;
+}
+
+.modal {
+  left: 50%;
+  top: 50%; 
+  margin-left: -150px;
+  margin-top: -150px;
+  .fixed;
+  z-index: 98;
+  .hide;
+  opacity: 0;
+  width: 320px;
+  padding: 35px 50px;
+  border-radius: 8px;
+  background: white;
+  -webkit-box-shadow: 0px 12px 35px 1px rgba(0,0,0,0.52);
+  -moz-box-shadow: 0px 12px 35px 1px rgba(0,0,0,0.52);
+  box-shadow: 0px 12px 35px 1px rgba(0,0,0,0.52);
+  label {
+    .block;
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+  input[type="email"] {
+    margin-bottom: 15px;
+  }
+  input[type="email"], textarea {
+    width: 100%;
+    font-size: 15px;
+    padding: 7px;
+    border-radius: 4px;
+    border: 1px solid #D7D7D7;
+    transition: border-color .3s ease-in-out;
+    outline: none;
+    &:focus {
+      border-color: @main-color;
+    }
+  }
+  textarea {
+    resize: none;
+  }
+  .button {
+    margin-top: 30px;
+  }
+}
+.modal-close-btn {
+  .absolute;
+  .right-top;
+  padding: 12px 16px;
+  font-size: 24px;
+  transition: opacity .35s ease-in-out;
+  &:hover {
+    opacity: 0.6;
+  }
+}

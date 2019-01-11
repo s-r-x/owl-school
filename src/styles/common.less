@@ -1,0 +1,70 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+// for scrollreveal or simiral plugins to prevent x scroll.
+// need to add the same rule to some inner wrappers in some cases
+body, .main-wrapper {
+  overflow-x: hidden;
+}
+.main-wrapper {
+  .relative;
+  transition: background-color .3s ease-out;
+}
+.container-fluid {
+  max-width: @site-width;
+}
+.container {
+  max-width: @site-inner-width;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  .clean-button;
+}
+
+p {
+  line-height: 28px;
+}
+h2 {
+  margin-top: 5px;
+  font-weight: 300;
+  line-height: 65px;
+  font-size: 72px;
+  margin-bottom: 30px;
+}
+picture {
+  .relative;
+  .full-height;
+}
+picture img {
+  max-width: 100%;
+  height: auto;
+}
+.section-text-part {
+  .full-height;
+  .flex;
+  .flex-column;
+  .flex-justify-center;
+  .flex-align-start;
+}
+
+// scrollreveal stuff
+html.sr {
+  picture img, .teacher-item, .section-text-part, .hero {
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,32 @@
+.dark-theme {
+  background-color: @dark-theme-bg;
+  p, h1, h2, h3, h4, h5, h6, li, .reviews-slider-nav, a, .theme-toggler {
+    color: @dark-theme-text-color;
+  }
+  .circle-point {
+    border-color: @dark-theme-text-color;
+  }
+  .hamburger--inner {
+    background-color: @dark-theme-text-color;
+  }
+  .site-footer {
+    background-color: transparent;
+  }
+  .hamburger.is-active {
+    .hamburger--inner {
+      background-color: black;
+    }
+    + .theme-toggler {
+      color: black;
+    }
+  }
+  .menu {
+    background-color: white;
+    li {
+      color: black;
+    }
+  }
+  .overlay {
+    background-color: white;
+  }
+}

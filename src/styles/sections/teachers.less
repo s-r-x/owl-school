@@ -1,0 +1,64 @@
+.teachers-section {
+  margin-top: 175px;
+  .section-text-part {
+    margin-bottom: 60px;
+    .flex-align-center;
+  }
+}
+.teacher-item {
+  .center;  
+  img {
+    width: 256px;
+    height: 256px;
+    object-fit: cover;
+    object-position: center-center;
+    .circle;
+  }
+  h3 {
+    font-weight: 300;
+    font-size: 36px;
+    margin-bottom: 0;
+  }
+  li {
+    margin-top: 11px;
+  }
+}
+
+@media(max-width: 1199px) {
+  .teacher-item {
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+@media(max-width: 991px) {
+  .teachers-section {
+    margin-top: 100px;
+  }
+}
+@media(max-width: 767px) and (min-width: 575px) {
+  .teacher-third {
+    margin-top: 60px;
+  }
+}
+@media(max-width: 575px) {
+  .teachers-section {
+    margin-top: 80px;
+    .section-text-part {
+      margin-bottom: 40px;
+    }
+  }
+  .teacher-item {
+    margin-bottom: 50px;
+    h3 {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+    li {
+      margin-top: 5px;
+    }
+  }
+}
