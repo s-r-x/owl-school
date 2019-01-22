@@ -1,6 +1,5 @@
 import Reveal from 'scrollreveal';
 
-// scrollreveal bullshit mobile test
 function isMobile(agent = navigator.userAgent) {
   return /Android|iPhone|iPad|iPod/i.test(agent)
 }
