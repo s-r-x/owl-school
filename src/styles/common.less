@@ -1,70 +1,120 @@
 *, *:after, *:before {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
-  font-size: 16px;
+	font-size: 16px;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 // for scrollreveal or simiral plugins to prevent x scroll.
 // need to add the same rule to some inner wrappers in some cases
 body, .main-wrapper {
-  overflow-x: hidden;
+	overflow-x: hidden;
 }
 .main-wrapper {
-  .relative;
-  transition: background-color .3s ease-out;
+	.relative;
+	transition: background-color .3s ease-out;
 }
 .container-fluid {
-  max-width: @site-width;
+	max-width: @site-width;
 }
 .container {
-  max-width: @site-inner-width;
+	max-width: @site-inner-width;
 }
 ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }
 
 button {
-  cursor: pointer;
-  .clean-button;
+	cursor: pointer;
+	.clean-button;
 }
 
 p {
-  line-height: 28px;
+	line-height: 28px;
 }
 h2 {
-  margin-top: 5px;
-  font-weight: 300;
-  line-height: 65px;
-  font-size: 72px;
-  margin-bottom: 30px;
+	margin-top: 5px;
+	font-weight: 300;
+	line-height: 65px;
+	font-size: 72px;
+	margin-bottom: 30px;
 }
 picture {
-  .relative;
-  .full-height;
+	.relative;
+	.full-height;
 }
 picture img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 .section-text-part {
-  .full-height;
-  .flex;
-  .flex-column;
-  .flex-justify-center;
-  .flex-align-start;
+	.full-height;
+	.flex;
+	.flex-column;
+	.flex-justify-center;
+	.flex-align-start;
 }
 
 // scrollreveal stuff
 html.sr {
-  picture img, .teacher-item, .section-text-part, .hero {
-    visibility: hidden;
+	picture img, .teacher-item, .section-text-part, .hero {
+		visibility: hidden;
+	}
+}
+body {
+	&::-webkit-scrollbar-track {
+		background-color: white;
+		border-radius: 45px;
+	}
+	&::-webkit-scrollbar {
+		width: 10px;
+		background-color: white;
+		border-radius: 45px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: @main-color;
+		border-radius: 45px;
+	}
+}
+
+// preloader
+@keyframes scaleOwl {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.25);
+	}
+}
+.preloader {
+	.fixed;
+	height: 100vh;
+	.full-width;
+	.flex;
+	.flex-center;
+	background-color: @dark-theme-bg;
+  opacity: 1;
+	z-index: 1000;
+  transition: opacity .3s ease-in-out;
+	img {
+		animation-name: scaleOwl;
+		animation-duration: 1s; /* or: Xms */
+		animation-iteration-count: infinite;
+		animation-direction: alternate; /* or: normal */
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards; /* or: backwards, both, none */
+	}
+  &.loaded {
+    opacity: 0; 
+    img {
+      animation: none;
+    }
   }
 }

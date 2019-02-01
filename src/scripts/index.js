@@ -1,17 +1,20 @@
 require('slick-carousel/slick/slick.css');
 require('../styles/index.less');
 
-import 'gsap/CSSPlugin'
+import CSSPlugin from 'gsap/CSSPlugin'
 import $ from 'jquery';
+
+const gsapPlugins = [ CSSPlugin ];
 
 window.$ = $;
 window.jquery = $;
 window.Jquery = $;
 window.jQuery = $;
 
-require('./carousel.js');
-require('./theme-change.js');
-require('./menu.js');
-require('./scroller.js');
-require('./reveal.js');
-require('./modal.js');
+require('./preloader');
+require('./carousel');
+require('./theme-change');
+require('./menu');
+require('./scroller');
+require('./reveal');
+require('./modal');

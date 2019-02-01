@@ -8,11 +8,12 @@
     <meta name="keywords" content="" />
     <meta name="author" content="" />
     <meta name="description" content="" />
+    <link rel="preload" href="/images/logo_light.svg" as="image">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900,900i&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="/index.css">
-    <link rel="preload" href="/images/loader.svg" as="image">
   </head>
   <body>
+      <%- include('./preloader') %>
     <div class="container-fluid main-wrapper">
       <%- include('sections/top') %>
       <%- include('./menu') %>

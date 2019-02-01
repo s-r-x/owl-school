@@ -6,5 +6,5 @@ module.exports = {
   dst_dir: path.join(__dirname, 'dist'),
   //images
   jpegQuality: 70,
-  maxImageWidth: 1440,
+  maxImageWidth: 1050,
 };
